@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>  
+   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+   <link rel='stylesheet' href='towers.css'>
+ </head>
+ <body>
+  <div class='container text-center'>
+    <h1>Icicles of The Apostle Islands</h1>
+    <h4>(A Spin-Off of Towers of Hanoi)</h4>
+    <p><strong>Rules:</strong> 1. Only one disk can be moved at a time (double-click to select, single click to move). 2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack. 3. No disk may be placed on top of a smaller disk. 4. Get all the disks from the first cell into the last. Good Luck!
+    <div class='row'>
+      <div id="leftContainer" class= 'backdrops col-xs-4'> 
+        <div id='leftInner' class='innerblock'>
+           <div id='size3' class= 'blocks 3'>
+             <img src='part1.png'>
+           </div>
+           <div id= 'size2' class= 'blocks 2'>
+             <img src='part2.png'>
+           </div>
+            <div id ='size1' class= 'blocks 1'>
+              <img src='part3.png'>
+           </div>
+            <div id ='size0' class= 'blocks 0'>
+              <img src='part4.png'>
+           </div>
+        </div>
+      </div>
+      <div id='middleContainer' class= 'backdrops text-center col-xs-4'>
+        <div id='middleInner' class='innerblock'>
+        </div>
+      </div>
+      <div id='rightContainer'class= 'backdrops text-center col-xs-4'>
+        <div id='rightInner' class='innerblock'>
+        </div>
+      </div>   
+    </div>
+  </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+   <script src='towers.js'></script>   
+ </body>  
+</html>
