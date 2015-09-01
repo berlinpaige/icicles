@@ -48,3 +48,10 @@ strong {
   bottom: 0;
   position: absolute;
 }
+button {
+  color: gray;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 40%;
+}

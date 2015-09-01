@@ -10,7 +10,8 @@ var towers = {
 
   init: function(){
     $('.backdrops').dblclick(towers.selectBox); 
-    $('.backdrops').click(towers.placeBox);  
+    $('.backdrops').click(towers.placeBox); 
+    $('button').click(towers.newGameIsClicked);
   },
   selectBox: function(){
     if (towers.elementSelected === false){
@@ -45,6 +46,10 @@ var towers = {
     }
   },
   placeBox: function(){
+    if ($('#rightContainer').children().children().hasClass('0') && $('#rightContainer').children().children().hasClass('1') && $('#rightContainer').children().children().hasClass('2') && $('#rightContainer').children().children().hasClass('3')){
+      console.log('gameOver!');
+      towers.gameOver();
+    } 
      
     if (towers.elementSelected === true){
      if (towers.selectedElement.hasClass('0')){
@@ -61,6 +66,26 @@ var towers = {
         $(this).children().append(towers.selectedElement);
       }  
     }
+  },
+  gameOver: function(){
+    $('h1, h4, p').text('');
+    $('h1').text("YOU WON!!  Let's Play Again");
+    $('.backdrops').attr('disabled', 'disabled');
+  },
+  newGameIsClicked: function(){
+    hasClass0 = false;
+    hasClass1 = false;
+    hasClass2 = false;
+    hasClass3 = false;
+    selectedElement = -1;
+    elementSelected = false;
+    $('.backdrops').removeAttr('disabled');
+    $('#leftContainer').append($('#size3'));
+    $('#leftContainer').append($('#size2'));
+    $('#leftContainer').append($('#size1'));
+    $('#leftContainer').append($('#size0'));
+
+
   }
 }
 
