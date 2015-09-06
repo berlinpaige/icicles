@@ -67,7 +67,7 @@ var towers = {
   gameOver: function(){
     $('h1, h4, p').text('');
     $('h1').text("YOU WON!!  Let's Play Again");
-    $('.backdrops').attr('disabled', 'disabled');
+    $('.backdrops').attr('disabled', 'disabled');         
   },
   newGameIsClicked: function(){
     $('.backdrops').removeAttr('disabled');
