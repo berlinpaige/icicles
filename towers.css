@@ -5,6 +5,7 @@ body{
   -o-background-size: cover;
   background-size: cover;
   color: #ffffff;
+  background-color: #000;
 }
 img{
   border: 4px solid #ffffff;
